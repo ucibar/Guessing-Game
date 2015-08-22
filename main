@@ -1,0 +1,5 @@
+#!/bin/bash
+clear
+source ./view/head
+source ./view/title
+source ./base/start_g

@@ -1,0 +1,14 @@
+read PANSWER
+
+case $PANSWER in
+	"E")
+	   source ./base/num_range
+           source ./base/gamef
+	   ;;
+	"H")
+	   echo -e "\t  -Oyundan Çıkılıyor !"
+	   exit 0
+	   ;;
+	*)
+	   bash ./main
+esac

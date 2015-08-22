@@ -1,0 +1,11 @@
+echo -e "\e[1m
+\t -Oyun basit. Bilgisayar aklında bir sayı tutuyor ve sen bulmaya çalışıyorsun...
+    
+\t -Merak Etme! Sayı Aralığını Sen Belirliyorsun. 
+    
+\t -Ayrıca Bilgisayar Tahminine Göre Seni Yönlendiriyor...
+
+\e[43m
+\t################################################################################\n\e[0m"
+
+echo -en "\t  -Oyuna Başlamak İstiyor musun (E/H)? -> "

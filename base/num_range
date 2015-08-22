@@ -1,0 +1,35 @@
+clear
+source ./view/head
+C_NUM='^[0-9]+$'
+echo -e "\t  -Öncelikle Sayı Aralığını Belirleyelim"
+	INUM="-1"
+	while :
+		do
+		INUM=$((INUM + 1))
+		echo -en "\t  -Alt Değerini Alalım -> "
+		read PARAM_A
+		if [[ $PARAM_A =~ $C_NUM ]];then
+			 break
+		fi
+		if [ "$INUM" -le "0" ];then
+			echo -e "\t  -Sayı Giriniz!"
+		elif [ "$INUM" = "1" ];then
+			echo -e "\t  -Kardeş Sayı Gir!"
+		elif [ "$INUM" = "2" ];then
+			echo -e "\t  -Yav Sayı Diyorum,Aloo!!"
+		elif [ "$INUM" = "3" ];then
+			echo -e "\t  -Salak Yemin Ederim Gerizekalı Bu Çocuk..."
+		fi
+		done
+	while :
+                do
+                echo -en "\t  -Ült Değerini Alalım -> "
+                read PARAM_B
+                if [[ $PARAM_B =~ $C_NUM ]];then 
+                         break
+                else
+                        echo -e "\t  -Sayi Giriniz!"
+                fi
+                done
+FARK=$(($PARAM_B - $PARAM_A))
+RANDOM_S=$((($RANDOM % $FARK) + $PARAM_A))

@@ -1,0 +1,27 @@
+clear
+./view/head
+TRUE="0"
+while [ "$TRUE" != "1" ]
+	do
+	echo -en "\n\t  -$PARAM_A ve $PARAM_B Arasında Bir Sayı Tahmin Et Bakalım -> ";read INPUT
+	if [ "$INPUT" -le "$PARAM_B" -a "$INPUT" -ge "$PARAM_A" ];then
+		if [ "$INPUT" -lt "$RANDOM_S" ];then
+                        echo -e "\n\t  -Tahminin Küçük -Elini Korkak Alıştırma ;)\n"
+                elif [ "$INPUT" -gt "$RANDOM_S" ];then
+                        echo -e "\n\t  -Tahminin Yüksek -Fazla Uçtun Dostum :)\n"
+		else
+			echo -e "\n\t  -Tebrikler\n"
+			echo -en "\t  -Yeni Oyuna Başlamak İstiyor musun (E)? -> ";read PPANSWER
+			
+			if [ "$PPANSWER" != "E" ];then
+				break
+			else
+				clear
+				source ./view/head
+				source ./base/num_range
+			fi
+		fi
+	else
+		echo -e "\t  -Sınır İhlali :)"
+	fi
+done
